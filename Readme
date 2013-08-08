@@ -1,0 +1,73 @@
+Como usar
+
+Crea un contenedor con la siguiente estructura
+
+Porfavor use class como selector del slider para multiples slider iguales
+
+<div class='slider' width='600'  height='250' time='5000' description='Loading Description' title='Loading Title'>
+    <img src='img1.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img2.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img3.jpg' title='Titulo' alt='Descripcion'>
+</div>
+
+para iniciar el slider añada
+
+$(".slider").sxslider()
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+El tiempo por default entre diapositiva es 5s o 5000ms y el tiempo de efecto es de 2s o 2000ms y el efecto default es "fade" o desvanecer
+para cambiar estos valores se pueden usar los siguientes metodos
+
+$(".slider").sxslider({speed:4000,direction:"left",transitionSpeed: 2000})
+
+Donde
+
+speed <- es el tiempo entre diapositivas en milisegundos (ms)
+
+direction <- es la direccion hacia donde se deslisa (efecto slide) si este no es definido o su valor es "none" el efecto sera "fade" o desvanecer
+
+transitionSpeed <- es el tiempo que tarda el efecto de trancicion en milisegundos (ms)
+
+Las opciones para direction son
+
+"up"
+"down"
+"left"
+"right"
+"none"
+
+---------------------------------------------------------------------------------------------------------------------
+
+Puede añadir varios slider con una misma clase
+
+<div class='slider' width='600'  height='250' time='5000' description='Loading Description' title='Loading Title'>
+    <img src='img1.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img2.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img3.jpg' title='Titulo' alt='Descripcion'>
+</div>
+
+<div class='slider' width='600'  height='250' time='5000' description='Loading Description' title='Loading Title'>
+    <img src='img4.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img5.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img6.jpg' title='Titulo' alt='Descripcion'>
+</div>
+
+E iniciar el slider con solo $(".slider").sxslider() y este afectara a ambos (Nota: si usa #id como selector solo funcionara con el primer slider por eso use .class)
+
+Tambien puede añadir varios slider con una clase distinta
+
+<div class='slider' width='600'  height='250' time='5000' description='Loading Description' title='Loading Title'>
+    <img src='img1.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img2.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img3.jpg' title='Titulo' alt='Descripcion'>
+</div>
+
+<div class='slider-dos' width='600'  height='250' time='5000' description='Loading Description' title='Loading Title'>
+    <img src='img4.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img5.jpg' title='Titulo' alt='Descripcion'>
+    <img src='img6.jpg' title='Titulo' alt='Descripcion'>
+</div>
+
+E iniciar los slider con $(".slider").sxslider() y $(".slider-dos").sxslider()
